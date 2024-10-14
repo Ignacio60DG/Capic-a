@@ -31,7 +31,7 @@ public class Main {
 
         if(cifra1 == 0 && cifra2 == 0 && cifra3 == 0 && cifra4 == 0) {
             System.out.println("Es cero");
-        }else if(cifra1 == 0 && cifra2 == 0 && cifra3 == 0 && cifra4<=9 && cifra3>0) {
+        }else if(cifra1 == 0 && cifra2 == 0 && cifra3 == 0 && cifra4<=9 && cifra4>0) {
             System.out.println("Es de una cifra por lo que es capicúa");
         } if (cifra1 == 0 && cifra2 == 0 && cifra3<=9 && cifra3>0 && cifra3==cifra4) {
             System.out.println("Es capicúa");
