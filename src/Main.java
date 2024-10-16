@@ -5,6 +5,49 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduzca 1");
+
+        int numero, original=sc.nextInt();
+        int iUnidades, iDecenas, iCentenas, iUnidadesMillar;
+
+        boolean bCapicua = false;
+        sc.close();
+
+        if (numero >= 1 && numero <=9999){
+            iUnidades = numero % 10;//Para sacar el desto de la dividión de diez como 129/10 =12 con resto 9
+            numero = numero/ 10; //Ahora tenemos 12
+
+            iDecenas = numero%10;
+            numero = numero/ 10;
+
+            iCentenas = numero%10;
+            numero = numero/10;
+
+            iUnidadesMillar = iUnidadesMillar%10;
+
+        }if(original <10){
+            bCapicua = true;
+
+        }else if(original<100){
+            if(iUnidades == iDecenas){
+                bCapicua=true;//mejor un sout
+            }
+        }else if(original<1000){
+            if(iUnidades == iCentenas){
+                bCapicua= true;
+            }
+        }else if(original<10000){
+            if((iUnidades == iUnidadesMillar)&&(iDecenas ==iCentenas));
+        }if(bCapicua == true){
+            System.out.println("Capicua");
+        }else{
+            System.out.println("No es capicua");
+        }
+    }
+        /*
         System.out.println("Es tu número capicúa");
 
         Scanner sc = new Scanner (System.in);
@@ -25,6 +68,7 @@ public class Main {
             numero = sc.next();
         }
         */
+        /*
         sc.close();
 
 
@@ -66,4 +110,5 @@ public class Main {
     }
 
          */
+
 }
